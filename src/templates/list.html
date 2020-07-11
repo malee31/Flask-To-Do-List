@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} To-Do {{listId}} {% endblock %}
+{% block styles %}
+	<link rel="stylesheet" href="{{url_for('static', filename='styles/list.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='styles/columnContainer.css')}}">
+{% endblock %}
+{% block content %}
+	<div class="columnContainer">
+		<form id="inputBar">
+			<input type="text" id="addInput" placeholder="Add to your To-Do List!">
+			<input type="submit" id="submitInput" value="Add" onclick="() => { console.log('{{listId}}'); }">
+		</form>
+		<table>
+			lol
+		</table>
+	</div>
+{% endblock %}

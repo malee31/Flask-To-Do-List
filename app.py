@@ -13,10 +13,14 @@ def home():
 	print(__name__)
 	return render_template("home.html", id=2)
 
+@app.route("/todo/<id>", methods = ["GET"])
+def todo(id):
+	return render_template("list.html", listId = id)
+
 @app.errorhandler(404)
 def notFound(e):
 	print("File not found", e)
-	return redirect(url_for("home"));
+	return redirect(url_for("home"))
 
 
 if __name__ == "__main__":
