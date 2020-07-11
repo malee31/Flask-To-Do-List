@@ -1,0 +1,13 @@
+# Credential and Testing Files
+testing/
+
+# Vim Swap Files
+*.swo
+*.swp
+
+#ctags
+tags
+
+#Python Files
+__pycache__/
+venv/
