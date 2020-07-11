@@ -1,0 +1,9 @@
+.columnContainer, .vccenterColumnContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.vccenterColumnContainer {
+	align-items: center;
+}

@@ -7,10 +7,17 @@ app.config.update(
 	SECRET_KEY = os.urandom(32)
 )
 
+@app.route("/home", methods = ["GET"])
 @app.route("/", methods = ["GET"])
 def home():
 	print(__name__)
-	return render_template("base.html", id=2)
+	return render_template("home.html", id=2)
+
+@app.errorhandler(404)
+def notFound(e):
+	print("File not found", e)
+	return redirect(url_for("home"));
+
 
 if __name__ == "__main__":
 	app.run(debug = True)

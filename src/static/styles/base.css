@@ -6,3 +6,8 @@ html {
 	font-family: Arial;
 	font-size: 100%;
 }
+
+body {
+	margin: 0;
+	padding: 0;
+}
