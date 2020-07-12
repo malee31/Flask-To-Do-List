@@ -7,15 +7,15 @@ app.config.update(
 	SECRET_KEY = os.urandom(32)
 )
 
-@app.route("/home", methods = ["GET"])
-@app.route("/", methods = ["GET"])
+@app.route("/todo", methods = ["GET"])
 def home():
 	print(__name__)
-	return render_template("home.html", id=2)
+	return render_template("home.html")
 
-@app.route("/todo/<id>", methods = ["GET"])
-def todo(id):
-	return render_template("list.html", listId = id)
+@app.route("/home", methods = ["GET"])
+@app.route("/", methods = ["GET"])
+def todo():
+	return render_template("list.html", listId = 1)
 
 @app.errorhandler(404)
 def notFound(e):
