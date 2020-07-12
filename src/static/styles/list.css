@@ -18,9 +18,27 @@
 
 table {
 	width: 100%;
+	font-size: 1.5rem;
 }
 
 tr {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
+	height: 100%;
 	padding: 5px;
+}
+
+tr td {
+	height: 100%;
+}
+
+tr td:nth-child(2) {
+	width: 100%;
+}
+
+.crossedOff {
+	text-decoration: line-through;
 }

@@ -6,12 +6,16 @@
 {% endblock %}
 {% block content %}
 	<div class="columnContainer">
-		<form id="inputBar">
-			<input type="text" id="addInput" placeholder="Add to your To-Do List!">
-			<input type="submit" id="submitInput" value="Add" onclick="() => { console.log('{{listId}}'); }">
-		</form>
+		<div id="inputBar">
+			<input type="text" id="addInput" placeholder="Add to your To-Do List! Saves when you refresh!">
+		</div>
 		<table>
-			lol
+			<tr>
+				<td>Completed</td>
+				<td>Task</td>
+				<td>Remove</td>
+			</tr>
 		</table>
+		<script src="{{url_for('static', filename='js/main.js')}}"></script>
 	</div>
 {% endblock %}
